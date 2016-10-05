@@ -61,20 +61,9 @@
     font: 1.4rem/1.8rem $sans;
     margin-bottom: .6rem;
     display: inline-block;
-    &:after {
-      content: ' | ';
-    }
-    &:last-of-type {
-      &:after {
-        content: "";
-      }
-    }
   }
   .clear-p {
       display: block;
-      &:after{
-          content: ""
-      }
   }
   .bylineBlock p {
     margin-top: 2.4rem;

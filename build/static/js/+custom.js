@@ -15,66 +15,6 @@ $(document).ready(function() {
 	// you can find that code here: https://github.com/DallasMorningNews/generator-dmninteractives/wiki/Cookbook
 
 
-	// ////////////////////////////////////////////////////////////////////////////
-	// ///// GLOBAL VARIABLE SETUP ////////////////////////////////////////////////
-	// ////////////////////////////////////////////////////////////////////////////
-	//
-	// // cowboys opponents
-	// var weeks = [
-	//   "Giants",
-	//   "Redskins",
-	//   "Bears",
-	//   "49ers",
-	//   "Bengals",
-	//   "Packers",
-	//   "Bye",
-	//   "Eagles",
-	//   "Browns",
-	//   "Steelers",
-	//   "Ravens",
-	//   "Redskins",
-	//   "Vikings",
-	//   "Giants",
-	//   "Buccaneers",
-	//   "Lions",
-	//   "Eagles",
-	//   "Wilcard opponent", // insert bye if no wildcard round
-	//   "Divisional opponent",
-	//   "Conference opponent",
-	//   "Super Bowl opponent"
- //  	];
-	//
-	// // integer equal to current week of the season
-	// var targetWeek = $("#seasonWeek").text().slice(-2);
-	// var currentWeek, index;
-	//
-	//
-	// // checking to make sure targetWeek is a number. There are some cases in the playoffs
-	// // where this variable will not be a number. In that case, we're going to do some
-	// // sniffing to figure out which week we are in based on the playoff round.
-	//
-	// // first, check to see if targetWeek is a number. if so, make it an integer
-	// if (isNaN(targetWeek) !== true) {
-	// 	currentWeek = parseInt(targetWeek);
-	// } else {
-	// 	// if it's not a number, assign a number to current week based on the text in #seasonWeek
-	// 	targetWeek = $("#seasonWeek").text();
-	// 	if (targetWeek === "Wildcard") {
-	// 		currentWeek = 18;
-	// 	} else if (targetWeek === "Divisional Round") {
-	// 		currentWeek = 19;
-	// 	} else if (targetWeek === "Conference Championship") {
-	// 		currentWeek = 20;
-	// 	} else if (targetWeek === "Super Bowl") {
-	// 		currentWeek = 21;
-	// 	}
-	// }
-	//
-	// // setting an index variable that corresponds to the opponent in the opponents array
-	// // since our index is 0-based, and NFL weeks are not, we subtract 1 from the current week
-	// index = currentWeek - 1;
-
-
 	// ***** CHARTING VARIABLES *****
 
 	// data object to hold parsed data

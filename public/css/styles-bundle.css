@@ -971,14 +971,8 @@ XIX. ADS
     font: 1.4rem/1.8rem "Gotham A", "Gotham B", Arial, sans-serif;
     margin-bottom: .6rem;
     display: inline-block; }
-    .gameHead p:after {
-      content: ' | '; }
-    .gameHead p:last-of-type:after {
-      content: ""; }
   .gameHead .clear-p {
     display: block; }
-    .gameHead .clear-p:after {
-      content: ""; }
   .gameHead .bylineBlock p {
     margin-top: 2.4rem;
     color: white; }
