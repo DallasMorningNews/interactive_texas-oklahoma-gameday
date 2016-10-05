@@ -59,7 +59,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.clearfix:after {
+.clearFix:after {
   content: "";
   display: table;
   clear: both; }
@@ -134,7 +134,10 @@ II. KASON TEMPLATE STYLES, HEADER AND FOOTER
   font-size: 14px; }
 
 .interactive-footer a, .interactive-footer p {
-  color: white; }
+  color: white;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  clear: left;
+  font-size: 1.4rem; }
 
 .interactive-footer a {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
@@ -158,7 +161,7 @@ a.top {
   display: table;
   clear: both; }
 
-.interactive-footer p {
+.interactiveFooter p {
   clear: both;
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 14px;
@@ -256,14 +259,14 @@ h6 {
 IV. CONTENT HEADER
 -------------------------------------------
 */
-#content-header {
+#contentHeader {
   position: relative; }
 
-#content-header img {
+#contentHeader img {
   width: 100%;
-  margin-bottom: .3rem; }
+  margin-bottom: -1px; }
 
-#content-header .cutline {
+#contentHeader .cutline {
   padding: 0 2rem;
   margin: 0 0 .6rem 0; }
 
@@ -272,7 +275,7 @@ IV. CONTENT HEADER
 V. CONTENT WELL
 -------------------------------------------
 */
-.content-well {
+.contentWell {
   font-family: "PT Serif", Georgia, Times, serif;
   margin: 0 auto;
   max-width: 1400px;
@@ -280,21 +283,21 @@ V. CONTENT WELL
   position: relative;
   width: 90%; }
 
-.content-well > p {
+.contentWell > p {
   max-width: 650px;
   font-size: 1.7rem;
   line-height: 2.4rem;
   font-family: "PT Serif", Georgia, Times, serif;
   margin: 0 auto 2.4rem auto; }
-  .content-well > p.twitter-tag {
+  .contentWell > p.twitterTag {
     font-style: italic;
     margin-top: 4.8rem; }
 
-.content-well > p:last-of-type {
+.contentWell > p:last-of-type {
   margin-bottom: 0; }
 
 @media (max-width: 500px) {
-  .content-well > p {
+  .contentWell > p {
     font-size: 1.6rem; } }
 
 /*
@@ -302,50 +305,50 @@ V. CONTENT WELL
 VI. STORY HEAD, BYLINES AND INTRO
 -------------------------------------------
 */
-#story-head {
+#storyHead {
   margin: 4.8rem auto 2.4rem auto;
   text-align: center;
   color: #212121;
   max-width: 1000px; }
 
-#story-head h1 {
+#storyHead h1 {
   color: #323232;
   font-size: 6.4rem;
   letter-spacing: -.2rem;
   line-height: 7.2rem;
   margin-bottom: 1.2rem; }
 
-#story-head h2 {
+#storyHead h2 {
   color: #323232;
   font-size: 3.2rem;
   line-height: 3.6rem; }
 
-#story-head h3 {
+#storyHead h3 {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 1.8rem;
   line-height: 2.4rem;
   margin-bottom: 2.4rem;
   text-transform: uppercase; }
 
-.byline-block {
+.bylineBlock {
   text-align: center;
   max-width: 650px;
   margin: 0 auto; }
 
-.byline-block p {
+.bylineBlock p {
   color: #212121;
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 1.4rem;
   line-height: 1.8rem;
   margin: 0 0 .3rem 0;
   text-align: center; }
-  .byline-block p a {
+  .bylineBlock p a {
     display: inline-block;
     color: #424242; }
-    .byline-block p a:visited {
+    .bylineBlock p a:visited {
       color: #424242; }
 
-.byline-block p:last-of-type {
+.bylineBlock p:last-of-type {
   margin-right: 0; }
 
 p.intro {
@@ -367,19 +370,18 @@ p.subhead {
   color: #323232;
   font-size: 2.4rem;
   line-height: 3.6rem;
-  margin: 4.8rem auto 2.4rem auto;
-  font-weight: bold; }
+  margin: 4.8rem auto 2.4rem auto; }
 
 @media (max-width: 860px) {
-  #story-head h1 {
+  #storyHead h1 {
     font-size: 4.8rem;
     line-height: 6rem;
     margin-bottom: 1.2rem; }
-  #story-head h2 {
+  #storyHead h2 {
     font-size: 2.4rem;
-    line-height: 3rem;
+    line-height: 3.6rem;
     margin-bottom: 1.2rem; }
-  #story-head h3 {
+  #storyHead h3 {
     font-size: 1.4rem;
     line-height: 1.8rem; }
   p.intro {
@@ -393,7 +395,7 @@ p.subhead {
     margin: 2rem .5rem 0 0; } }
 
 @media (max-width: 500px) {
-  #story-head h1 {
+  #storyHead h1 {
     font-size: 4.2rem;
     line-height: 4.8rem;
     letter-spacing: 0; }
@@ -410,35 +412,35 @@ p.subhead {
 VII. SIDE BLOCKS & INLINE BLOCKS
 -------------------------------------------
 */
-.side-block {
+.sideBlock {
   max-width: 400px;
   width: 100%;
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif; }
 
-.inline-block {
+.inlineBlock {
   max-width: 650px;
   width: 100%;
   margin: 4.8rem auto;
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif; }
 
-.side-block p, .inline-block p {
+.sideBlock p, .inlineBlock p {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 1.4rem;
   line-height: 1.8rem; }
 
-.side-block h4, .side-block h5, .side-block h6, .inline-block h4 {
+.sideBlock h4, .sideBlock h5, .sideBlock h6, .inlineBlock h4 {
   font-weight: bold;
   color: #212121; }
 
-.side-block img, .inline-block img {
+.sideBlock img, .inlineBlock img {
   margin: 0 0 .3rem 0;
   width: 100%; }
 
-.right-block {
+.rightBlock {
   float: right;
   margin: 0 0 4.8rem 4.8rem; }
 
-.left-block {
+.leftBlock {
   float: left;
   margin: 0 4.8rem 4.8rem 0; }
 
@@ -449,12 +451,12 @@ p.source {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif; }
 
 @media (max-width: 740px) {
-  .right-block, .left-block {
+  .rightBlock, .leftBlock {
     float: none;
     margin: 4.8rem auto 4.8rem;
     width: 100%;
     max-width: 650px; }
-  .graphic-block {
+  .graphicBlock {
     max-width: 400px; } }
 
 /*
@@ -469,28 +471,28 @@ VIII. IMAGE, WIDE, FULL AND INLINE BLOCKS
   color: #797470;
   font-weight: normal; }
 
-.image-block {
+.imageBlock {
   width: 100%; }
 
-.image-block img {
+.imageBlock img {
   margin-bottom: .3rem;
   width: 100%; }
 
-.wide-block, .full-block {
+.wideBlock, .fullBlock {
   margin: 4.8rem auto; }
 
-.full-block p.cutline {
+.fullBlock p.cutline {
   padding: 0 2rem; }
 
-.double-block img {
+.doubleBlock img {
   float: left;
   margin-right: 2%;
   width: 49%; }
 
-.double-block img:last-of-type {
+.doubleBlock img:last-of-type {
   margin-right: 0; }
 
-.mug-block {
+.mugBlock {
   max-width: 150px;
   margin-left: calc((100% - 650px) / 2);
   float: left;
@@ -499,11 +501,11 @@ VIII. IMAGE, WIDE, FULL AND INLINE BLOCKS
   margin-top: 5px; }
 
 @media (max-width: 740px) {
-  .double-block img {
+  .doubleBlock img {
     float: none;
     margin-right: 0;
     width: 100%; }
-  .mug-block {
+  .mugBlock {
     margin-left: 0;
     max-width: 125px; } }
 
@@ -540,21 +542,37 @@ IX. PULLQUOTES
 
 /*
 -------------------------------------------
+X. NDN EMBEDS
+-------------------------------------------
+*/
+.ndn_embed {
+  margin: 4.8rem auto;
+  max-width: 650px;
+  min-height: 170px;
+  position: relative;
+  width: 100%;
+  z-index: 0; }
+
+.ndn_embed p {
+  font-family: Arial, sans-serif !important; }
+
+/*
+-------------------------------------------
 XI. VIDEO EMBEDS
 -------------------------------------------
 */
-.video-block {
+.videoBlock {
   width: 100%;
   max-width: 650px;
   margin: 4.8rem auto; }
 
-.video-wrapper {
+.videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0; }
 
-.video-wrapper iframe, .video-wrapper embed {
+.videoWrapper iframe, .videoWrapper embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -566,18 +584,18 @@ XI. VIDEO EMBEDS
 XII. RELATED LINKS AND FACT BOXES
 -------------------------------------------
 */
-.related-links a {
+.relatedLinks a {
   display: block;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.8rem;
   margin-bottom: 1.8rem; }
 
-.related-links a:last-child {
+.relatedLinks a:last-child {
   margin-bottom: 0; }
 
 @media (max-width: 740px) {
-  .related-links, .fact-box {
+  .relatedLinks, .factBox {
     border-bottom: 1px solid #323232;
     border-top: 1px solid #323232;
     padding: 2.4rem 0; } }
@@ -587,54 +605,54 @@ XII. RELATED LINKS AND FACT BOXES
 XIII. BREAKOUT MODULES
 -------------------------------------------
 */
-.breakout-module {
+.breakoutModule {
   margin: 4.8rem auto;
   width: 95%; }
 
-.breakout-module h5 {
+.breakoutModule h5 {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-weight: bold; }
 
-.breakout-module img {
+.breakoutModule img {
   margin-bottom: .3rem;
   width: 100%; }
 
-.breakout-module p {
+.breakoutModule p {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 1.4rem;
   line-height: 1.8rem; }
 
-.breakout-box {
+.breakoutBox {
   float: left;
   margin-right: 2%; }
 
-.breakout-box:last-child {
+.breakoutBox:last-child {
   margin-right: 0; }
 
-.two-across .breakout-box {
+.twoAcross .breakoutBox {
   width: 49%; }
 
-.three-across .breakout-box {
+.threeAcross .breakoutBox {
   width: 32%; }
 
-.four-across .breakout-box {
+.fourAcross .breakoutBox {
   width: 23.5%; }
 
 @media (max-width: 740px) {
-  .breakout-module {
+  .breakoutModule {
     border-bottom: 1px solid #323232;
     border-top: 1px solid #323232;
     margin: 4.8rem auto;
     padding: 2.4rem 0; }
-  .breakout-module img {
+  .breakoutModule img {
     float: left;
     margin-right: 1rem;
     width: 50%; }
-  .two-across .breakout-box, .three-across .breakout-box, .four-across .breakout-box {
+  .twoAcross .breakoutBox, .threeAcross .breakoutBox, .fourAcross .breakoutBox {
     margin-bottom: 1.2rem;
     float: none;
     width: 100%; }
-  .breakout-box:last-child {
+  .breakoutBox:last-child {
     margin-bottom: 0; } }
 
 /*
@@ -650,7 +668,7 @@ XIV. SLIDESHOWS
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   color: #797470; }
 
-.slide-container {
+.slideContainer {
   overflow: hidden;
   position: relative;
   width: 100%; }
@@ -666,7 +684,7 @@ XIV. SLIDESHOWS
   transition: all .3s ease-out;
   width: 100%; }
 
-.slide-button {
+.slideButton {
   background-color: white;
   cursor: pointer;
   display: block;
@@ -680,10 +698,10 @@ XIV. SLIDESHOWS
   transition: opacity .3s ease-out;
   width: 5rem; }
 
-.slide-button:hover {
+.slideButton:hover {
   opacity: 1; }
 
-.next-button {
+.nextButton {
   right: 0; }
 
 .slide img {
@@ -694,16 +712,16 @@ XIV. SLIDESHOWS
   opacity: 1;
   position: relative; }
 
-.pre-slide {
+.preSlide {
   margin-left: 100%;
   opacity: 1; }
 
-.post-slide {
+.postSlide {
   margin-left: -100%;
   opacity: 0; }
 
 @media (max-width: 600px) {
-  .slide-button {
+  .slideButton {
     width: 3rem;
     height: 3rem; } }
 
@@ -807,16 +825,16 @@ XVII. DROP DOWN LIST
   cursor: pointer;
   transition: color .25s ease-out; }
 
-.drop-list .drop-hed {
+.dropList .dropHed {
   cursor: pointer; }
 
-.drop-list .drop-item {
+.dropList .dropItem {
   background-color: #f0f0f0;
   border-radius: 2px;
   margin-bottom: .6rem;
   padding: 1rem; }
 
-.drop-list .drop-hed span.cardinal {
+.dropList .dropHed span.cardinal {
   background-color: #A8A8A8;
   border-radius: 50%;
   color: white;
@@ -830,26 +848,26 @@ XVII. DROP DOWN LIST
   text-indent: -1px;
   width: 2.4rem; }
 
-.drop-list .drop-hed h5 {
+.dropList .dropHed h5 {
   float: left;
   margin-bottom: 0;
   width: calc(100% - 7rem); }
 
-.drop-list .drop-hed .fa {
+.dropList .dropHed .fa {
   color: #5CA3E6;
   float: right;
   font-size: 2rem;
   line-height: 2.4rem;
   margin: 0 1rem; }
 
-.drop-list .drop-text {
+.dropList .dropText {
   display: none;
   padding: 1rem 4rem 1rem 3.4rem; }
 
-.drop-list .expanded-text {
+.dropList .expandedText {
   display: block; }
 
-.drop-list p.drop-text {
+.dropList p.dropText {
   font-family: 'Gotham A', 'Gotham B', Arial, sans-serif;
   font-size: 1.4rem;
   line-height: 1.8rem; }
@@ -883,17 +901,18 @@ XIX. ADS
 -------------------------------------------
 */
 .ad {
-  border-bottom: 1px solid #d7d7d7;
-  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #323232;
+  border-top: 1px solid #323232;
   margin: 4.8rem 0;
   padding: 3.6rem 0;
   position: relative;
   text-align: center;
   z-index: 0; }
 
-.no-rule {
+.noRule {
   border-bottom: none !important;
-  border-top: none !important; }
+  border-top: none !important;
+  padding: 2.4rem 0; }
 
 .ad * {
   margin: 0 auto !important; }
@@ -909,3 +928,662 @@ XIX. ADS
     margin: 2.4rem 0;
     padding: 2.4rem 0; } }
 
+@media (max-width: 650px) {
+  .ledeImg {
+    -webkit-filter: none;
+    filter: none; } }
+
+#playoffWeek {
+  display: none; }
+
+.gameHead {
+  display: block;
+  width: 100%;
+  height: 58vw;
+  background-color: rgba(15, 15, 15, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  padding: 5% 5% 0; }
+  .gameHead h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    color: white; }
+  .gameHead .logoBlock {
+    margin-bottom: 1.2rem; }
+  .gameHead .teamLogo {
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 10px; }
+    .gameHead .teamLogo:last-of-type {
+      margin-right: 0; }
+  .gameHead h1 {
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    margin-bottom: 1.2rem; }
+  .gameHead p {
+    font: 1.4rem/1.8rem "Gotham A", "Gotham B", Arial, sans-serif;
+    margin-bottom: .6rem;
+    display: inline-block; }
+    .gameHead p:after {
+      content: ' | '; }
+    .gameHead p:last-of-type:after {
+      content: ""; }
+  .gameHead .clear-p {
+    display: block; }
+    .gameHead .clear-p:after {
+      content: ""; }
+  .gameHead .bylineBlock p {
+    margin-top: 2.4rem;
+    color: white; }
+  @media (max-width: 800px) {
+    .gameHead h1 {
+      font-size: 4.8rem;
+      line-height: 5.4rem; }
+    .gameHead p {
+      font-size: 1.4rem;
+      line-height: 1.4rem; } }
+  @media (max-width: 650px) {
+    .gameHead {
+      position: relative;
+      background-color: #0f0f0f;
+      color: white;
+      height: auto; }
+      .gameHead .teamLogo {
+        width: 40px !important;
+        height: 40px !important; }
+      .gameHead h1 {
+        font-size: 3.6rem;
+        line-height: 4.2rem; }
+      .gameHead h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid white; }
+      .gameHead .bylineBlock p {
+        color: #0f0f0f; }
+      .gameHead p:after {
+        content: ''; } }
+
+.subhead {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  margin-bottom: 1.2rem;
+  color: #323232; }
+  @media (max-width: 600px) {
+    .subhead {
+      font-size: 2.1rem !important;
+      line-height: 2.4rem !important; } }
+
+.noShow {
+  display: none; }
+
+.sectionLabel {
+  text-align: center;
+  background-color: #323232;
+  padding: 5px 5px 5px;
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  font: 1.6rem/2.4rem "Gotham A", "Gotham B", Arial, sans-serif;
+  margin: 0 auto 3.6rem;
+  color: white;
+  text-transform: uppercase;
+  position: relative; }
+  .sectionLabel:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #323232;
+    left: 50%;
+    margin-left: -8px;
+    bottom: -8px; }
+  .sectionLabel.whiteTheme {
+    background-color: white;
+    color: black; }
+    .sectionLabel.whiteTheme:after {
+      background-color: white; }
+
+#winLoss {
+  background-color: #0f0f0f;
+  padding: 4.8rem 0;
+  margin-bottom: 0;
+  color: white;
+  position: relative;
+  z-index: 10;
+  margin-top: -2px; }
+  #winLoss p {
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8rem; }
+  #winLoss .subhead {
+    color: white;
+    margin: 0 0 .6rem;
+    font-size: 2.4rem;
+    line-height: 3rem; }
+  #winLoss #win {
+    padding: 0 2% 0 15%;
+    border-right: 1px solid white; }
+    #winLoss #win p {
+      text-align: right; }
+  #winLoss #loss {
+    padding: 0 15% 0 2%;
+    border-left: 1px solid white;
+    margin-left: -1px; }
+    #winLoss #loss p {
+      text-align: left; }
+  #winLoss div {
+    width: 50%;
+    float: left; }
+    #winLoss div p {
+      text-align: center; }
+  @media (max-width: 800px) {
+    #winLoss #win {
+      padding: 0 2% 0 2%; }
+    #winLoss #loss {
+      padding: 0 2% 0 2%; } }
+  @media (max-width: 650px) {
+    #winLoss {
+      padding: 0 0 2.4rem; }
+      #winLoss div {
+        width: 95%;
+        float: none;
+        margin: 0 auto 2.4rem; }
+      #winLoss #win p, #winLoss #loss p {
+        text-align: center; }
+      #winLoss #win {
+        border-right: none;
+        padding: 0 0; }
+      #winLoss #loss {
+        border-left: none;
+        margin: 0 auto;
+        padding: 0 0; } }
+
+#fourKeys {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid #797979;
+  padding-bottom: 2.4rem; }
+  #fourKeys p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-bottom: 0; }
+  #fourKeys .row {
+    overflow: hidden; }
+
+.four-key {
+  width: 25%;
+  padding: 0 2% 1000px;
+  margin-bottom: -1000px;
+  float: left;
+  border-right: 1px solid #d7d7d7; }
+  .four-key:last-of-type {
+    border-right: 0; }
+  .four-key span {
+    float: left;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    border: 5px solid #e34e36;
+    border-radius: 50%;
+    background-color: #e34e36;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 0px; }
+  @media (max-width: 900px) {
+    .four-key {
+      width: 50%;
+      padding: 0 2%;
+      margin-bottom: 2.4rem; }
+      .four-key:nth-of-type(even) {
+        border-right: none; }
+      .four-key:nth-of-type(odd) {
+        clear: left; } }
+  @media (max-width: 600px) {
+    .four-key {
+      width: 100%;
+      border-right: none;
+      float: none;
+      border-bottom: 1px solid #d7d7d7;
+      padding-bottom: 2.4rem; }
+      .four-key:last-of-type {
+        border-bottom: none; } }
+
+#picks {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+  #picks .row {
+    overflow: hidden;
+    margin-top: 2.4rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #d7d7d7; }
+    #picks .row:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none; }
+  #picks .staff {
+    float: left;
+    width: 33%;
+    padding: 0 2% 1000px;
+    margin-bottom: -1000px;
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    border-right: 1px solid #d7d7d7; }
+    #picks .staff:last-of-type {
+      border-right: none; }
+    #picks .staff p {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin-bottom: 0; }
+    #picks .staff .subhead {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin: 0 0 1.2rem 0;
+      text-align: left; }
+    #picks .staff img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      float: left;
+      margin: 0 10px 0px 0; }
+  @media (max-width: 800px) {
+    #picks .row {
+      margin-bottom: 0; }
+    #picks li {
+      float: none;
+      width: 100%;
+      padding: 0 0;
+      margin-bottom: 2.4rem; }
+      #picks li:nth-of-type(even) {
+        padding: 0 0; } }
+  @media (max-width: 700px) {
+    #picks .staff {
+      width: 100%;
+      float: none;
+      margin-bottom: 1.2rem;
+      padding: 0 0 1.2rem 0;
+      border-bottom: 1px solid #d7d7d7;
+      border-right: none; }
+      #picks .staff:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0; }
+    #picks .row {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0; }
+      #picks .row:nth-of-type(2) {
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid #d7d7d7; } }
+
+#matchup {
+  max-width: 1000px;
+  border-bottom: none;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  margin: 0 auto; }
+  #matchup .key {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid #d7d7d7;
+    max-width: none; }
+    #matchup .key span {
+      display: inline-block;
+      padding-left: 10px;
+      border-right: 1px solid #d7d7d7;
+      text-transform: uppercase; }
+      #matchup .key span:first-of-type {
+        padding-left: 0; }
+      #matchup .key span:last-of-type {
+        border-right: none; }
+  #matchup .question {
+    width: 15%;
+    padding-right: 10px; }
+  #matchup .edge {
+    width: 70px; }
+  #matchup .know {
+    width: calc(85% - 70px); }
+  #matchup .matchup {
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 1.2rem 0 1.2rem; }
+    #matchup .matchup:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding: 1.2rem 0 0; }
+    #matchup .matchup .question {
+      float: left;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      padding-right: 10px; }
+    #matchup .matchup .edge {
+      margin: 0 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      float: left; }
+    #matchup .matchup .know {
+      padding-left: 10px;
+      max-width: none;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      float: left;
+      margin-bottom: 0; }
+    #matchup .matchup .edgeLabel {
+      display: none; }
+  @media (max-width: 800px) {
+    #matchup .question {
+      width: 20%; }
+    #matchup .edge {
+      width: 15%; }
+    #matchup .know {
+      width: 65%; } }
+  @media (max-width: 600px) {
+    #matchup .key {
+      display: none; }
+    #matchup .question, #matchup .know {
+      width: 100%;
+      float: none; }
+    #matchup .edge {
+      width: 50px;
+      float: left;
+      clear: left; }
+    #matchup .matchup .question, #matchup .matchup .know, #matchup .matchup .edge {
+      padding: 0 0; }
+    #matchup .matchup .question {
+      font-size: 2.1rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.2rem; }
+    #matchup .matchup .edge {
+      margin: 0 20px 1.2rem 0; }
+    #matchup .matchup .know {
+      float: none; }
+    #matchup .matchup .edgeLabel {
+      display: block;
+      float: left;
+      width: 50px;
+      margin: .2rem 20px 1rem 0;
+      font: bold 1.2rem/1.4rem "Gotham A", "Gotham B", Arial, sans-serif;
+      text-transform: uppercase;
+      text-align: center; } }
+
+#spotlight {
+  border-top: none;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 4.8rem; }
+  #spotlight img {
+    width: 100%; }
+  #spotlight .spotContainer {
+    position: relative; }
+  #spotlight .spotlightContent {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(15, 15, 15, 0.9);
+    max-width: 450px;
+    padding: 20px; }
+    #spotlight .spotlightContent p {
+      color: white;
+      font: 1.3rem/1.8rem "Gotham A", "Gotham B", Arial, sans-serif;
+      margin-bottom: 1.8rem; }
+    #spotlight .spotlightContent .subhead {
+      font: bold 2.4rem/3rem "Gotham A", "Gotham B", Arial, sans-serif;
+      text-align: left;
+      margin: 0 0 2.4rem; }
+    #spotlight .spotlightContent .credit {
+      font: italic 1.4rem/1.8rem "Gotham A", "Gotham B", Arial, sans-serif; }
+    #spotlight .spotlightContent.leftSide {
+      right: auto;
+      left: 20px; }
+  @media (max-width: 1100px) {
+    #spotlight .spotContainer {
+      overflow-y: hidden; }
+    #spotlight .spotlightContent {
+      top: 0;
+      right: 0;
+      height: 66vw;
+      overflow-y: auto; } }
+  @media (max-width: 900px) {
+    #spotlight .spotlightContent {
+      position: relative;
+      top: auto;
+      left: auto;
+      background-color: #0f0f0f;
+      max-width: none;
+      width: 100%;
+      padding: 2.4rem 2.5%;
+      height: auto;
+      margin-top: -1px; }
+      #spotlight .spotlightContent.leftSide {
+        top: auto;
+        left: auto;
+        right: auto; } }
+
+#userPick h5 {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin: 2.4rem 0 1.2rem;
+  padding: 2.4rem 0 0;
+  border-top: 1px solid #797979; }
+
+#userPick p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif; }
+
+#userPick .readout {
+  margin: 2.4rem 0 0;
+  padding: 2.4rem 0 0;
+  border-top: 1px solid #d7d7d7;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-bottom: 0; }
+  #userPick .readout span {
+    color: #0185d3;
+    font-weight: bold; }
+
+#userSubmission {
+  width: 28%;
+  float: left;
+  padding: 20px;
+  background-color: #f5f5f5;
+  position: relative;
+  top: 8px; }
+
+#userForm p {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-weight: bold; }
+
+#userForm button {
+  width: 50%;
+  min-width: 100px;
+  margin: 2.4rem auto;
+  clear: left;
+  display: block;
+  border: none;
+  background-color: #0185d3;
+  color: white;
+  padding: 10px;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.2rem;
+  -webkit-transtion: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer; }
+  #userForm button:hover {
+    background-color: #0165a0; }
+  #userForm button:focus {
+    outline: none; }
+
+.scoreBlock {
+  width: 47.5%;
+  float: left;
+  margin: 0 5% 1.2rem 0; }
+  .scoreBlock:last-of-type {
+    margin-right: 0; }
+  .scoreBlock input {
+    width: 100%;
+    font-size: 3.6rem;
+    text-align: center;
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: .6rem 0;
+    border: 1px solid #d7d7d7; }
+  .scoreBlock span {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.2rem; }
+
+#response h6 {
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-weight: bold; }
+
+#response button {
+  width: 100px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #0185d3;
+  color: white;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.2rem;
+  border-radius: 3px;
+  margin-right: 5px;
+  cursor: pointer;
+  -webkit-transtion: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  #response button:last-of-type {
+    margin-right: 0; }
+  #response button:hover {
+    background-color: #0165a0; }
+  #response button:focus {
+    outline: 0; }
+
+#chartBlock {
+  width: 70%;
+  float: right;
+  position: relative; }
+
+#chart {
+  width: 100%;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  padding-bottom: 1.8rem; }
+
+.team-name {
+  font-size: 1.3rem; }
+
+path, line {
+  shape-rendering: crispEdges;
+  stroke: #d7d7d7; }
+  path.diagonal, line.diagonal {
+    stroke: #3d3d3d; }
+
+#tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #212121;
+  box-shadow: 0px 0px 2px #CECDC6;
+  padding: .5rem 1rem;
+  width: 180px;
+  border-radius: 3px; }
+
+#tooltip p {
+  color: white;
+  font-family: "Gotham A", "Gotham B", Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  #tooltip {
+    max-width: 120px; } }
+
+@media (max-width: 1075px) {
+  .scoreBlock {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 100px; }
+    .scoreBlock:last-of-type {
+      margin: 0 auto; }
+    .scoreBlock input {
+      font-size: 2.4rem; } }
+
+@media (max-width: 900px) {
+  #userSubmission {
+    width: 100%;
+    float: none;
+    margin-bottom: 2.4rem; }
+  #chartBlock {
+    width: 100%;
+    float: none; }
+  .scoreBlock {
+    float: left;
+    margin-right: 10px; }
+    .scoreBlock:last-of-type {
+      margin-right: 20px; }
+  #userForm button {
+    float: left;
+    clear: none;
+    margin: 0 0;
+    height: 50px;
+    max-width: 200px; } }
+
+@media (max-width: 900px) and (max-width: 600px) {
+  .scoreBlock {
+    max-width: none;
+    width: 47.5%;
+    margin-right: 5%; }
+    .scoreBlock:last-of-type {
+      margin-right: 0; }
+  #userForm button {
+    float: none;
+    clear: left;
+    width: 100%;
+    max-width: none;
+    height: auto; } }
+
+.score {
+  display: inline-block; }
+
+.horns-color {
+  fill: #bf5a27; }
+
+.sooners-color {
+  fill: #841819; }

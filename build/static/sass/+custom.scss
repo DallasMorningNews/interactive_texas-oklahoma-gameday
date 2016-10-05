@@ -1,11 +1,811 @@
-//  _____           _                    _____ _         _           
-// /  __ \         | |                  /  ___| |       | |          
-// | /  \/_   _ ___| |_ ___  _ __ ___   \ `--.| |_ _   _| | ___  ___ 
+//  _____           _                    _____ _         _
+// /  __ \         | |                  /  ___| |       | |
+// | /  \/_   _ ___| |_ ___  _ __ ___   \ `--.| |_ _   _| | ___  ___
 // | |   | | | / __| __/ _ \| '_ ` _ \   `--. \ __| | | | |/ _ \/ __|
 // | \__/\ |_| \__ \ || (_) | | | | | | /\__/ / |_| |_| | |  __/\__ \
 //  \____/\__,_|___/\__\___/|_| |_| |_| \____/ \__|\__, |_|\___||___/
-//                                                  __/ |            
-//                                                 |___/             
+//                                                  __/ |
+//                                                 |___/
 
 @import 'variables';
 @import 'mixins';
+
+.ledeImg {
+    @media(max-width: 650px) {
+        -webkit-filter: none;
+        filter: none;
+    }
+}
+
+#playoffWeek {
+    display: none;
+}
+
+.gameHead {
+  display: block;
+  width: 100%;
+  height: 58vw;
+  background-color: rgba(15,15,15,.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  padding: 5% 5% 0;
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    color: white;
+  }
+  .logoBlock {
+      margin-bottom: 1.2rem;
+  }
+  .teamLogo {
+      width: 50px !important;
+      height: 50px !important;
+    margin-right: 10px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  h1 {
+    font-family: $sans;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    margin-bottom: 1.2rem;
+  }
+  p{
+    font: 1.4rem/1.8rem $sans;
+    margin-bottom: .6rem;
+    display: inline-block;
+    &:after {
+      content: ' | ';
+    }
+    &:last-of-type {
+      &:after {
+        content: "";
+      }
+    }
+  }
+  .clear-p {
+      display: block;
+      &:after{
+          content: ""
+      }
+  }
+  .bylineBlock p {
+    margin-top: 2.4rem;
+    color: white;
+  }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 4.8rem;
+      line-height: 5.4rem;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+    }
+  }
+  @media (max-width: 650px) {
+    position: relative;
+    background-color: rgba(15,15,15,1);
+    color: white;
+    height: auto;
+    .teamLogo {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    h1 {
+      font-size: 3.6rem;
+      line-height: 4.2rem;
+
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 1px solid white;
+    }
+    .bylineBlock p {
+      color: rgb(15,15,15);
+    }
+    p:after {
+      content: '';
+    }
+  }
+}
+
+
+.subhead {
+  text-align: center;
+  font-weight: bold;
+  font-family: $sans;
+  margin-bottom: 1.2rem;
+  color: $black50;
+  @media (max-width: 600px) {
+    font-size: 2.1rem !important;
+    line-height: 2.4rem !important;
+  }
+}
+
+
+.noShow {
+  display: none;
+}
+.sectionLabel {
+  text-align: center;
+  background-color: $black50;
+  padding: 5px 5px 5px;
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  font: 1.6rem/2.4rem $sans;
+  margin: 0 auto 3.6rem;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    @include rotate(45deg);
+    background-color: $black50;
+    left: 50%;
+    margin-left: -8px;
+    bottom: -8px;
+  }
+  &.whiteTheme {
+    background-color: white;
+    color: black;
+    &:after {
+      background-color: white;
+    }
+  }
+}
+#winLoss {
+  background-color: rgba(15,15,15,1);
+  padding: 4.8rem 0;
+  margin-bottom: 0;
+  color: white;
+  position: relative;
+  z-index: 10;
+  margin-top: -2px;
+  p {
+    font-family: $sans;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .subhead {
+      color: white;
+    margin: 0 0 .6rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
+
+  }
+  #win {
+    padding: 0 2% 0 15%;
+    border-right: 1px solid white;
+    p {
+      text-align: right;
+    }
+  }
+  #loss {
+    padding: 0 15% 0 2%;
+    border-left: 1px solid white;
+    margin-left: -1px;
+    p {
+      text-align: left;
+    }
+  }
+  div {
+    width: 50%;
+    float: left;
+    p {
+      text-align: center;
+    }
+  }
+  @media (max-width: 800px) {
+    #win {
+      padding: 0 2% 0 2%;
+    }
+    #loss {
+      padding: 0 2% 0 2%;
+    }
+  }
+  @media (max-width: 650px) {
+    padding: 0 0 2.4rem;
+    div {
+      width: 95%;
+      float: none;
+      margin: 0 auto 2.4rem;
+    }
+    #win p, #loss p {
+        text-align: center;
+    }
+    #win {
+      border-right: none;
+      padding: 0 0;
+    }
+    #loss {
+      border-left: none;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+  }
+}
+
+#fourKeys {
+        font-family: $sans;
+        margin-bottom: 2.4rem;
+        border-bottom: 1px solid $black121;
+        padding-bottom: 2.4rem;
+        p {
+            @include type(1.3rem, 1.8rem, 0);
+        }
+        .row {
+            overflow: hidden;
+        }
+}
+
+.four-key {
+    width: 25%;
+    padding: 0 2% 1000px;
+    margin-bottom: -1000px;
+    float: left;
+    border-right: 1px solid $black215;
+    &:last-of-type {
+        border-right: 0;
+    }
+    span {
+        float: left;
+        @include type(30px, 40px, 0);
+        width: 50px;
+        height: 50px;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        border: 5px solid $chartRed;
+        border-radius: 50%;
+        background-color: $chartRed;
+        color: white;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+    @media(max-width: 900px) {
+        width: 50%;
+        padding: 0 2%;
+        margin-bottom: 2.4rem;
+        &:nth-of-type(even) {
+            border-right: none;
+        }
+        &:nth-of-type(odd) {
+            clear: left;
+        }
+    }
+    @media(max-width: 600px) {
+        width: 100%;
+        border-right: none;
+        float: none;
+        border-bottom: 1px solid $black215;
+        padding-bottom: 2.4rem;
+        &:last-of-type{
+            border-bottom: none;
+        }
+    }
+}
+
+
+
+#picks {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    .row {
+        overflow: hidden;
+        margin-top: 2.4rem;
+        padding-top: 2.4rem;
+        border-top: 1px solid $black215;
+        &:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+    }
+  .staff {
+    float: left;
+    width: 33%;
+    padding: 0 2% 1000px;
+    margin-bottom: -1000px;
+    font-family: $sans;
+    border-right: 1px solid $black215;
+    &:last-of-type {
+        border-right: none;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin-bottom: 0;
+    }
+    .subhead {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin: 0 0 1.2rem 0;
+      text-align: left;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      float: left;
+      margin: 0 10px 0px 0;
+    }
+  }
+  @media (max-width: 800px) {
+    .row {
+      margin-bottom: 0;
+    }
+    li {
+      float: none;
+      width: 100%;
+      padding: 0 0;
+      margin-bottom: 2.4rem;
+      &:nth-of-type(even) {
+        padding: 0 0;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+      .staff {
+          width: 100%;
+          float: none;
+          margin-bottom: 1.2rem;
+          padding: 0 0 1.2rem 0;
+          border-bottom: 1px solid $black215;
+          border-right: none;
+          &:last-of-type {
+              border-bottom: none;
+              margin-bottom: 0;
+              padding-bottom: 0;
+          }
+      }
+      .row {
+          border-top: none;
+          margin-top: 0;
+          padding-top: 0;
+          &:nth-of-type(2) {
+              margin-top: 1.2rem;
+              padding-top: 1.2rem;
+              border-top: 1px solid $black215;
+          }
+      }
+  }
+}
+
+#matchup {
+  max-width: 1000px;
+  border-bottom: none;
+  font-family: $sans;
+  margin: 0 auto;
+  .key {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    border-bottom: 1px solid $black215;
+    max-width: none;
+    span {
+      display: inline-block;
+      padding-left: 10px;
+      border-right: 1px solid $black215;
+      text-transform: uppercase;
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+  .question {
+    width: 15%;
+    padding-right: 10px;
+  }
+  .edge {
+    width: 70px;
+  }
+  .know {
+    width: calc(85% - 70px);
+  }
+  .matchup {
+    width: 100%;
+    border-bottom: 1px solid $black215;
+    padding: 1.2rem 0 1.2rem;
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding: 1.2rem 0 0;
+    }
+    .question {
+      float: left;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      padding-right: 10px;
+    }
+    .edge {
+        margin: 0 10px;;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      float: left;
+    }
+    .know {
+      padding-left: 10px;
+      max-width: none;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      float: left;
+      margin-bottom: 0;
+    }
+    .edgeLabel {
+      display: none;
+    }
+  }
+  @media (max-width: 800px) {
+    .question {
+      width: 20%;
+    }
+    .edge {
+      width: 15%;
+    }
+    .know {
+      width: 65%;
+    }
+  }
+  @media (max-width: 600px) {
+    .key {
+      display: none;
+    }
+    .question, .know {
+      width: 100%;
+      float: none;
+    }
+    .edge {
+      width: 50px;
+      float: left;
+      clear: left;
+    }
+    .matchup {
+      .question, .know, .edge {
+        padding:  0 0;
+      }
+      .question {
+          @include type(2.1rem, 2.4rem, 1.2rem);
+      }
+      .edge {
+        margin: 0 20px 1.2rem 0;
+      }
+      .know {
+        float: none;
+      }
+      .edgeLabel {
+        display: block;
+        float: left;
+        width: 50px;
+        margin: .2rem 20px 1rem 0;
+        font: bold 1.2rem/1.4rem $sans;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+#spotlight {
+  border-top: none;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 4.8rem;
+  img {
+    width: 100%;
+  }
+  .spotContainer {
+    position: relative;
+  }
+  .spotlightContent {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(15,15,15,.9);
+    max-width: 450px;
+    padding: 20px;
+    p {
+      color: white;
+      font: 1.3rem/1.8rem $sans;
+      margin-bottom: 1.8rem;
+    }
+    .subhead {
+      font: bold 2.4rem/3rem $sans;
+      text-align: left;
+      margin: 0 0 2.4rem;
+    }
+    .credit {
+      font: italic 1.4rem/1.8rem $sans;
+    }
+    &.leftSide {
+      right: auto;
+      left: 20px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .spotContainer {
+      overflow-y: hidden;
+    }
+    .spotlightContent {
+      top: 0;
+      right: 0;
+      height: 66vw;
+      overflow-y: auto;
+    }
+  }
+  @media (max-width: 900px) {
+    .spotlightContent {
+      position: relative;
+      top: auto;
+      left: auto;
+      background-color: rgba(15,15,15, 1);
+      max-width: none;
+      width: 100%;
+      padding: 2.4rem 2.5%;
+      height: auto;
+      margin-top: -1px;
+      &.leftSide {
+        top: auto;
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+}
+
+#userPick {
+    h5 {
+        font-family: $sans;
+        text-align: center;
+        font-weight: bold;
+        margin: 2.4rem 0 1.2rem;
+        padding: 2.4rem 0 0;
+        border-top: 1px solid $black121;
+    }
+    p {
+        @include type(1.3rem, 1.8rem, 2.4rem);
+        font-family: $sans;
+    }
+    .readout {
+        margin: 2.4rem 0 0;
+        padding: 2.4rem 0 0;
+        border-top: 1px solid $black215;
+        font-family: $sans;
+        @include type(1.4rem, 1.8rem, 0);
+        span {
+            color: $dmnblue;
+            font-weight: bold;
+        }
+    }
+}
+
+#userSubmission {
+    width: 28%;
+    float: left;
+    padding: 20px;
+    background-color: $black245;
+    position: relative;
+    top: 8px;
+}
+
+#userForm {
+    p {
+        font-family: $sans;
+        font-weight: bold;
+    }
+    button {
+        width: 50%;
+        min-width: 100px;
+        margin: 2.4rem auto;
+        clear: left;
+        display: block;
+        border: none;
+        background-color: $dmnblue;
+        color: white;
+        padding: 10px;
+        font-family: $sans;
+        font-weight: bold;
+        border-radius: 3px;
+        @include type(1.6rem, 2.4rem);
+        @include transition(all, .2s, ease-out);
+        cursor: pointer;
+        &:hover {
+            background-color: darken($dmnblue, 10%);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.scoreBlock {
+    width: 47.5%;
+    float: left;
+    margin: 0 5% 1.2rem 0;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    input {
+        width: 100%;
+        font-size: 3.6rem;
+        text-align: center;
+        font-family: $sans;
+        font-weight: bold;
+        border-radius: 3px;
+        padding: .6rem 0;
+        border: 1px solid $black215;
+    }
+    span {
+        text-align: center;
+        font-weight: bold;
+        font-family: $sans;
+        display: block;
+        @include type(1.6rem, 2.4rem);
+    }
+}
+#response {
+    h6 {
+        font-family: $sans;
+        font-weight: bold;
+    }
+    button {
+        width: 100px;
+        padding: 5px 10px;
+        border: none;
+        background-color: $dmnblue;
+        color: white;
+        font-family: $sans;
+        font-weight: bold;
+        @include type(1.3rem, 1.8rem);
+        border-radius: 3px;
+        margin-right: 5px;
+        cursor: pointer;
+        @include transition(all, .2s, ease-out);
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            background-color: darken($dmnblue, 10%);
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+#chartBlock {
+    width: 70%;
+    float: right;
+    position: relative;
+}
+#chart {
+    width: 100%;
+    font-family: $sans;
+    padding-bottom: 1.8rem;
+}
+
+.team-name {
+    font-size: 1.3rem;
+}
+
+path, line {
+    shape-rendering: crispEdges;
+    stroke: $black215;
+    &.diagonal {
+        stroke: $warmBlack;
+    }
+}
+
+#tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $black33;
+  box-shadow: 0px 0px 2px #CECDC6;
+  padding: .5rem 1rem;
+  width: 180px;
+  border-radius: 3px;
+}
+
+#tooltip p {
+    color: white;
+  font-family: $sans;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    #tooltip {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 1075px) {
+    .scoreBlock {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+        &:last-of-type {
+            margin: 0 auto;
+        }
+        max-width: 100px;
+        input {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #userSubmission {
+        width: 100%;
+        float: none;
+        margin-bottom: 2.4rem;
+    }
+    #chartBlock {
+        width: 100%;
+        float: none;
+    }
+    .scoreBlock {
+        float: left;
+        margin-right: 10px;
+        &:last-of-type {
+            margin-right: 20px;
+        }
+    }
+
+    #userForm button {
+        float: left;
+        clear: none;
+        margin: 0 0;
+        height: 50px;
+        max-width: 200px;
+    }
+
+    @media (max-width: 600px) {
+        .scoreBlock {
+            max-width: none;
+            width: 47.5%;
+            margin-right: 5%;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        #userForm button {
+            float: none;
+            clear: left;
+            width: 100%;
+            max-width: none;
+            height: auto;
+        }
+    }
+}
+
+.score {
+    display: inline-block;
+}
+
+.horns-color {
+    fill: rgb(191,90,39);
+}
+.sooners-color {
+    fill: rgb(132,24,25);
+}

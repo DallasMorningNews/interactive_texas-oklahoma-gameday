@@ -1,16 +1,16 @@
 {
   "id": "61692512339",
   "name": "texas-oklahoma-gameday",
-  "pageTitle": "<Title>",
-  "shareTitle": "<Title>",
-  "shareText": "<Text>",
-  "tweetText": "<Text>",
+  "pageTitle": "Texas-Oklahoma Gameday: The Red River Showdown",
+  "shareTitle": "Texas-Oklahoma Gameday: Horns seek to right the ship; Sooners look to keep rolling",
+  "shareText": "What the Longhorns and Sooners need to do to take home the Golden Hat in this year’s Red River Showdown",
+  "tweetText": "What the Longhorns and Sooners need to do to win this year’s Red River Showdown",
   "publishYear": 2016,
-  "publishDate": "2016-10-5T00:00:00Z",
+  "publishDate": "2016-10-06T09:30:00Z",
   "url": "http://interactives.dallasnews.com/2016/texas-oklahoma-gameday/",
-  "authors": "<Authors - comma-separated, lowercase>",
-  "desk": "<Desk>",
-  "section": "<Section>",
+  "authors": "ezra siegel, brady vardeman",
+  "desk": "sportsdaydfw",
+  "section": "college-sports",
   "keywords": [
     "interactives",
     "dallas",
@@ -19,10 +19,18 @@
     "dallas newspaper",
     "dallas morning news",
     "dallas morning news newspaper"
+    "red river showdown",
+    "texas longhorns",
+    "oklahoma sooners",
+    "charlie strong",
+    "bob stoops",
+    "baker mayfield",
+    "shane buechele",
+    "tyrone swoopes"
   ],
   "imgURL": "http://interactives.dallasnews.com/2016/texas-oklahoma-gameday/undefined",
-  "imgWidth": "<Width - w/out \"px\">",
-  "imgHeight": "<Height - w/out \"px\">",
-  "sectionTwitter": "<handle - w/out \"@\">",
-  "authorTwitter": "<handle - w/out \"@\">"
+  "imgWidth": "1200",
+  "imgHeight": "630",
+  "sectionTwitter": "@SportsDayDFW",
+  "authorTwitter": "@SiegelEzra, @BradyVardeman"
 }

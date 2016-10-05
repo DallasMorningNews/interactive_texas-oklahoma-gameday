@@ -33,6 +33,9 @@
 
 
 {%block custom_head%}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
 {%endblock%}
 
 
@@ -49,17 +52,13 @@ var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFP
 adSlot0.setTargeting("position", "x01");
 adSlot0.addService(googletag.pubads());
 
-/*
 var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
 adSlot1.setTargeting("position", "x02");
 adSlot1.addService(googletag.pubads());
-*/
 
-/*
 var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
 adSlot2.setTargeting("position", "x03");
 adSlot2.addService(googletag.pubads());
-*/
 }
 else
 {
@@ -69,17 +68,14 @@ var adSlot0 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFP
 adSlot0.setTargeting("position", "Top");
 adSlot0.addService(googletag.pubads());
 
-/*
 var adSlot1 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionMiddle");
 adSlot1.setTargeting("position", "Top");
 adSlot1.addService(googletag.pubads());
-*/
 
-/*
 var adSlot2 = googletag.defineSlot('/' + DFP_networkId + '/' + DFP_sitepage, DFPSlotSizes, "dfpAdPositionBottom");
 adSlot2.setTargeting("position", "Top");
 adSlot2.addService(googletag.pubads());
-*/
+
  }
 </script>
 <script type="text/javascript">
@@ -91,77 +87,299 @@ googletag.enableServices();
 
 
 {%block content%}
-<section id="content-header">
-	<img src="images/_defaultImage.jpg" alt="#" />
-	<p class="cutline">Cutline goes here. You can remove this tag if you don't feel the lead image needs a cutline</p>
+
+
+<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '258290334265148',
+				xfbml: true,
+				version: 'v2.3'
+			});
+		};
+
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
+<section id="contentHeader">
+
+    <!-- the lede image should be cropped to 3000 x 1750 -->
+    {{img.jpg("texoulede", "Texas running back D’Onta Foreman rushes against Oklahoma linebacker Jordan Evans in the 2015 Red River Showdown.", 'ledeImg')}}
+
+
+    <!-- don't forget to update the opponent the opponent team logo image path -->
+    <!-- h1 tag should be "visigint mascot at home mascot" -->
+
+    <div class="gameHead clearFix">
+        <div class="logoBlock">
+            <img class="teamLogo" src="images/_hornsSig.png" alt="Longhorns" />
+            <img class="teamLogo" src="images/_soonersSig.png" alt="Sooners" />
+        </div>
+        <h2 id="label">Texas-Oklahoma Gameday</h2>
+        <h1>Longhorns vs. Sooners</h1>
+        <p>11 a.m. Saturday <strong>TV: </strong>Fox Sports 1</p>
+        <p><strong>Radio: </strong>KRLD-AM 1080 AM</p>
+        <p class="clear-p"><strong>Line: </strong>Sooners by 10&frac12;</p>
+        <p class="clear-p">By Ezra Siegel and Brady Vardeman | Special Contributors</p>
+        <!-- end bylineBlock -->
+
+        <div class="shareComments shareCommentsTop">
+            <ul id="share-bar1" class="width-auto-hack"></ul>
+        </div>
+    </div>
+
 </section>
 <!-- end contentHeader -->
 
-<section class="content-well clearfix">
+<section id="winLoss" class="clearFix cowSection">
 
-	<header id="story-head">
-		<h3>Label, if needed</h3>
-		<h1>Main Headline</h1>
-		<h2>Deck head goes in this spot here</h2>
-	</header>
-		<!-- end storyHead -->
-
-    <div class="byline-block">
-        <p>By <a target="_blank" href="mailto:emailaddresshere">Writer Name</a> | Staff Writer</p>
-        <p>Published Month Date, Year</p>
-        <!-- <p>Updated Month, Date, Year</p> -->
+    <div id="win">
+        <p class="subhead">Longhorns win if ...</p>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. </p>
     </div>
-    <!-- end bylineBlock -->
+    <!-- end win -->
 
-	<div class="shareComments shareCommentsTop">
-		<ul id="share-bar1" class="width-auto-hack"></ul>
-	</div>
-	<!-- end shareComments -->
+    <div id="loss">
+        <p class="subhead">Sooners win if ... </p>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. </p>
+    </div>
+    <!-- end loss -->
 
-    <p class="intro"><span class="dropcap">A</span>n opening paragraph goes here. I love the Weather & Opera section plagiarism Julian Assange syndicated process vs. product curmudgeon, attracting young readers cognitive surplus the audience knows more than I do discuss anonymity WikiLeaks hyperhyperlocal Arianna future scoop, Twitter topples dictators the medium is the message information overload natural-born blogger metered model Colbert bump Julian Assange CTR.</p>
+</section>
+<!-- end winLoss -->
 
-    <p>column-inch trolls copyboy data visualization AOL afternoon paper shoot a photo attracting young readers, MinnPost but what's the business model Instagram fair use fourth estate morgue writing, The Work of Art in the Age of Mechanical Reproduction audience atomization overcome free as in beer Pictures of Goats section kitchen table of the future masthead.</p>
+{%include "adblock1.html" %}
 
-    {%include "adblock1.html" %}
+    <section class="contentWell clearFix">
 
-    <!--
-      use the above include with adblock2.html and adblock3.html to place adblocks 2 and 3, then delete this comment.
-      it won't self-destruct, but it is cleaner
-    -->
+    <section id="fourKeys" class="clearfix">
+        <h4 class="sectionLabel">Keys to the Game</h4>
+        <div class="row">
+        <div class="four-key clearfix">
+            <p><span class="keyNumber">1</span><strong>Who contains the pass? </strong> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        </div>
+        <div class="four-key clearfix">
+            <p><span class="keyNumber">2</span><strong>Can either team force a turnover? </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        </div>
+        <div class="four-key clearfix">
+            <p><span class="keyNumber">3</span>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        </div>
+        <div class="four-key clearfix">
+            <p><span class="keyNumber">4</span>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        </div>
+        </div>
+    </section>
 
-    <p>horse-race coverage copyboy the power of the press belongs to the person who owns one data visualization tweet Jeff Jarvis Patch Like button explainer, TechCrunch should isn't a business model copyright Romenesko WordPress Arianna Kindle Single Pictures of Goats section got drudged, gamification put the paper to bed the other longer Book Review The Work of Art in the Age of Mechanical Reproduction open newsroom Foursquare A.J. Liebling.</p>
-
-    <p>Instagram Quora linkbait people formerly known as the audience bringing a tote bag to a knife fight YouTube RT syndicated the power of the press belongs to the person who owns one, Alberto Ibarguen The Work of Art in the Age of Mechanical Reproduction open newsroom The Weekender the medium is the message Dan Fleckner analog thinking future of context Instagram, David Foster Wallace reporting gutter Aron Pilhofer serendipity This Week in Review he said she said.</p>
-
-    <p class="twitter-tag">Follow writer name on Twitter at <a href="urlhere">@twittertag.</a></p>
 
 
-	<section class="credits clearfix">
-        <p><strong>Author:</strong> <a href="mailto:emailaddress">Name</a></p>
-        <p><strong>Editor:</strong> <a href="mailto:emailaddress">Name</a></p>
-        <p><strong>Copy Editor:</strong> <a href="mailto:emailaddress">Name</a></p>
-        <p><strong>Photos:</strong> <a href="mailto:emailaddress">Name</a></p>
-        <p><strong>Graphics:</strong> <a href="mailto:emailaddress">Name</a></p>
-        <p><strong>Designer:</strong> <a href="mailto:emailaddress">Name</a></p>
-	</section>
-	<!-- end credits -->
+    <div class="wideBlock imageBlock">
 
-	<section class="more clearfix">
+        <h4 class="sectionLabel">SportsDay’s Picks</h4>
+        {{img.jpg("cowledetest", "Alt text")}}
+        <p class="cutline">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. (Photog name/Staff Photographer)</p>
+    </div>
+    <!-- end wide image -->
+
+    <section id="picks" class="clearFix cowSection">
+        <div class="row clearFix">
+            <div class="staff clearFix">
+                <img src="images/_cowlishaw.jpg" alt="Tim Cowlishaw" />
+                <p><strong>Tim Cowlishaw: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.  <strong class="score">Team by X</strong></p>
+            </div>
+            <div class="staff clearFix">
+                <img src="images/_gosselin.jpg" alt="Rick Gosselin" />
+                <p><strong>Rick Gosselin: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.  <strong class="score">Team by XX</strong></p>
+            </div>
+
+            <div class="staff clearFix">
+                <img src="images/_sherrington.jpg" alt="Kevin Sherrington" />
+                <p><strong>Kevin Sherrington: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. <strong class="score">Team by XX</strong></p>
+            </div>
+        </div>
+
+        <div class="row clearFix">
+            <div class="staff clearFix">
+                <img src="images/_carlton.jpg" alt="Chuck Carlton" />
+                <p><strong>Chuck Carlton: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. <strong class="score">Team by X.</strong></p>
+            </div>
+            <div class="staff clearFix">
+                <img src="images/_vardeman.jpg" alt="Brady Vardeman" />
+                <p><strong>Brady Vardeman: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. <strong class="score">Team by XX</strong></p>
+            </div>
+            <div class="staff clearFix">
+                <img src="images/_siegel.jpg" alt="Ezra Siegel" />
+                <p><strong>Ezra Siegel: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. <strong class="score">Team by XX</strong></p>
+            </div>
+        </div>
+
+
+        <div id="userPick">
+            <h5>You make the call</h5>
+            <p>We want to know who you who think will win this week’s Cowboys game. Enter your score below, and see which team other readers think will take home the “W.” Scores plotted on the lower-right of the chart indicate a predicted Cowboys victory, upper-left indicate a predicted opponent victory. (Note: Only scores below 80 will be shown.)</p>
+
+            <div id="userSubmission">
+
+                <div id="userForm" class="clearFix">
+
+                    <p class="chatter">Who do you think will win? Enter the scores for each team, then click the "submit" button.</p>
+                    <div class="scoreBlock">
+                        <input id="hornsScore" type="text" pattern="[0-9]*" placeholder="0" />
+                        <span>Longhorns</span>
+                    </div>
+
+                    <div class="scoreBlock">
+                        <input id="soonersScore"  type="text" pattern="[0-9]*" placeholder="0" />
+                        <span id="opponent">Sooners</span>
+                    </div>
+
+                    <button id="submit">Submit</button>
+                </div>
+
+                <div id="response" class="noShow clearFix">
+                    <h6>Thank you for your submission</h6>
+                    <p>You picked the <span class="userTeam"></span> to <span class="userResult">win</span>, <span class="userScore"></span>. Share your prediction on social media:</p>
+                    <button id="faceShare">Facebook</button>
+                    <button id="twitterShare">Twitter</button>
+                </div>
+
+                <p class="readout"><span class="predictPercentage"></span> of readers are picking the <span class="predictTeam"></span> to win this week by an average of <span class="predictPoints"></span> points.</p>
+
+
+            </div>
+
+            <div id="chartBlock">
+
+                <div id="tooltip" class="noShow">
+					<p><strong>Longhrons: </strong> <span class="hornsTipScore"></span></p>
+					<p><strong><span>Sooners</span>:</strong> <span class="soonersTipScore"></span></p>
+                    <p><strong>Times predicted: </strong> <span class="tipPredict"></span></p>
+				</div>
+
+                <div id="chart"></div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- end picks -->
+
+
+
+    {%include "adblock2.html" %}
+
+    <section id="matchup" class="clearFix cowSection">
+
+    <h4 class="sectionLabel">Scouting report</h4>
+
+        <div id="matchupContent" class="clearFix">
+
+            <div class="matchupBlock">
+
+            <p class="key"><span class="question">Situation</span><span class="edge">Edge</span><span class="know">In the know</span></p>
+
+                <div id="cowboysRun" class="matchup clearFix">
+                    <p class="question">When the Sooners run the ball</p>
+                    <span class="edgeLabel">Edge</span><img class="edge" src="images/_soonersSig.png" alt="Sooners" />
+                    <p class="know">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+                <!-- end cowboysRun -->
+
+                <div id="cowboysPass" class="matchup clearFix">
+                    <p class="question">When the Sooners pass the ball</p>
+                    <span class="edgeLabel">Edge</span><img class="edge" src="images/_soonersSig.png" alt="Sooners" />
+                    <p class="know">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+                <!-- end cowboysPass -->
+
+                <div id="oppRun" class="matchup clearFix">
+                    <p class="question">When the Longhorns run the ball</p>
+                    <span class="edgeLabel">Edge</span><img class="edge" src="images/_hornsSig.png" alt="Longhorns" />
+                    <p class="know">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+                <!-- end oppRun -->
+
+                <div id="oppPass" class="matchup clearFix">
+                    <p class="question">When the Longhorns pass the ball</p>
+                    <span class="edgeLabel">Edge</span><img class="edge" src="images/_hornsSig.png" alt="Longhorns" />
+                    <p class="know">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+                <!-- end oppPass -->
+
+                <div id="specialTeams" class="matchup clearFix">
+                    <p class="question">Special teams</p>
+                    <span class="edgeLabel">Edge</span><img class="edge" src="images/_soonersSig.png" alt="Sooners" />
+                    <p class="know">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                </div>
+                <!-- end specialTeams -->
+
+            </div>
+        </div>
+
+        </section>
+     </section>
+
+        <section id="spotlight" class="clearFix cowSection">
+
+
+            <!-- this image should be squarely cropped to provide enough depth for the content -->
+            <!-- this subject should be on the left or right side. if right side, remove leftSide class  -->
+
+            <div class="spotContainer">
+                {{img.jpg("cowledetest", "Alt text for image")}}
+                <div class="spotlightContent leftSide">
+
+                    <h4 class="sectionLabel whiteTheme">Spotlight</h4>
+                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p><strong>Sturm’s prediction: </strong>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <p class="credit">Photographer name/Staff Photographer</p>
+                </div>
+
+            </div>
+
+    </section>
+
+
+
+
+    {%include "adblock3.html" %}
+
+    <section class="credits clearfix">
+        <p><strong>Top photo:</strong> <a href="mailto:spool@dallasnews.com">Smiley N. Pool</a></p>
+    </section>
+    <!-- end credits -->
+
+	<section class="more clearFix">
 		<h5>Read more from The Dallas Morning News</h5>
-		<a class="clearfix" href="#">
-			<img src="images/_defaultImage.jpg" alt="#" />
-			<h6>Story title goes here</h6>
-			<p>Description of the story goes in this spot here</p>
+		<a class="clearFix" href="http://interactives.dallasnews.com/2016/jerry-jones-office/">
+			<img src="images/_jerryShare.jpg" alt="Jerry Jones" />
+			<h6>Trappings of legend</h6>
+			<p>While Jerry Jones doesn’t live in the past, an exclusive look inside the Cowboys owner’s office is a journey through the franchise’s history.</p>
 		</a>
-		<a class="clearfix" href="#">
-			<img src="images/_defaultImage.jpg" alt="#" />
-			<h6>Story title goes here</h6>
-			<p>Description of the story goes in this spot here</p>
+		<a class="clearFix" href="http://interactives.dallasnews.com/2016/realignment/">
+			<img src="images/_confShare.jpg" alt="Conference realignent" />
+			<h6>Build the perfect NCAA conference</h6>
+			<p>Want to have a say in what Big 12 expansion looks like? Create your dream conference of eight to 16 schools.</p>
 		</a>
-		<a class="clearfix" href="#">
-			<img src="images/_defaultImage.jpg" alt="#" />
-			<h6>Story title goes here</h6>
-			<p>Description of the story goes in this spot here</p>
+		<a class="clearFix" href="http://interactives.dallasnews.com/2016/concussions/index.html">
+			<img src="images/_helmetShare.jpg" alt="The helmet conundrum" />
+			<h6>The helmet conundrum</h6>
+			<p>The ultimate symbol of football, the helmet, doesn’t offer the ultimate in protection.</p>
 		</a>
 	</section>
 	<!-- end more -->
@@ -197,6 +415,6 @@ googletag.enableServices();
 	twitterTag = "{{sectionTwitter}}",
 	comments = true,
 	share = true;
-	OAS_sitepage = 'www.dallasnews.com/{{desk}}/{{section}}/';
+	OAS_sitepage = 'www.sportsdaydfw.com/college-sports';
 </script>
 {%endblock%}
